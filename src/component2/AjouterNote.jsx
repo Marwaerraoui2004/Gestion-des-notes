@@ -23,20 +23,8 @@ export default function AjouterNote() {
   return (
     <div>
       <h2>Ajouter une note</h2>
-      <input 
-        type="text" 
-        placeholder="Entrez le titre de la note" 
-        value={title} 
-        onChange={(e) => setTitle(e.target.value)} 
-        className="Noteinput"
-      />
-      <input 
-        type="text" 
-        placeholder="Entrez le contenu de la note" 
-        value={content} 
-        onChange={(e) => setContent(e.target.value)} 
-        className="Noteinput"
-      />
+      <input  type="text" placeholder="Entrez le titre de la note" value={title} onChange={(e) => setTitle(e.target.value)}  className="Noteinput"/>
+      <input type="text"  placeholder="Entrez le contenu de la note" value={content} onChange={(e) => setContent(e.target.value)} className="Noteinput"/>
       <button type="button" onClick={ajouterNotes}>Ajouter</button>
     </div>
   );

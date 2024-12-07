@@ -48,17 +48,9 @@ export default function Logine() {
         <div className="login-form">
           <h1 className="titree">Login</h1>
           <input type="text"  className="input-field" placeholder="Entrez votre CIN" value={cin} onChange={(e) => setCin(e.target.value)}/>
-          <input
-            type="password"
-            className="input-field"
-            placeholder="Entrez votre mot de passe"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <input type="password" className="input-field" placeholder="Entrez votre mot de passe" value={password} onChange={(e) => setPassword(e.target.value)} />
           
-          <button className="login-button" type="button" onClick={envoyer}>
-            Valider
-          </button>
+          <button className="login-button" type="button" onClick={envoyer}>Valider</button>
         </div>
       )}
       
