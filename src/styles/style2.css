@@ -1,0 +1,145 @@
+.login-button::hover {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 203, 142, 0.3);
+    transition: left 0.4s ease;
+  }
+  
+  .note-content {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .note-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .titre {
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .titre:hover {
+    color: rgba(0, 202, 255, 0.5);
+    transition: color 0.3s ease;
+  }
+  
+  .note-user {
+    font-size: 12px;
+    color: #a9a9a9;
+    font-style: italic;
+    margin-top: 5px;
+  }
+  
+  
+  
+  #anim {
+    width: 900px;
+    height: 1000px;
+  }
+  
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .formulair {
+    background-color: #fff8f1;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    margin: 20px auto;
+    transition: all 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  .formulair:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+  }
+  .hidden{
+    display: none;
+  }
+  
+  #mybtn{
+    background: linear-gradient(135deg, rgba(139, 105, 67, 0.8), rgba(64, 224, 208, 0.8));
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  .password-form {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .password-form h2 {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .password-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+  }
+  
+  .password-form input:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+  }
+  
+  .password-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  

@@ -1,66 +1,117 @@
+
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #FFE4C4;
+  background: linear-gradient(160deg , rgba(0, 255, 255, 0.3), rgba(255, 160, 122, 0.5));
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   flex-direction: column;
-  overflow-y: auto; /* Permet le défilement global */
+  overflow-y: hidden;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .login-container {
   width: 100%;
-  max-width: 100%; 
-  max-height: 100vh; /* Limite la hauteur de la boîte, ajustez selon vos besoins */
+  max-width: 100%;
+  max-height: 100vh;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(255, 218, 185, 0.9),rgba(255, 160, 122, 0.5));
   border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  overflow-y: auto; /* Permet le défilement à l'intérieur de la boîte */
+  overflow-y: auto;
+  animation: slideIn 0.8s ease-out;
 }
+
 .login-container::-webkit-scrollbar {
   display: none;
 }
 
+.login-container:hover {
+  transform: scale(1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 30px 60px rgba(0, 255, 255, 0.3);
+}
 
 .input-field {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 30px;
   font-size: 16px;
   color: #333;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
+  animation: floatUp 0.8s ease-in-out both;
+}
+
+.input-field:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.input-field:nth-child(2) {
+  animation-delay: 0.4s;
 }
 
 .input-field:focus {
-  border-color: #FFE4C4;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.5);
+  outline: none;
+}
+
+.NoteSearch {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  animation: floatUp 0.8s ease-in-out both;
+}
+
+.Noteinput {
+  width: 70%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  animation: floatUp 0.8s ease-in-out both;
+}
+
+.Noteinput:focus {
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.5);
   outline: none;
 }
 
 .login-button {
   width: 100%;
   padding: 12px;
-  background-color: #FFDAB9;
+  background-color: #FFDAB9; 
   color: black;
   font-size: 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  animation: floatUp 0.8s ease-in-out 0.6s both;
 }
 
 .login-button:hover {
@@ -76,57 +127,78 @@ body {
 }
 
 .mydiv {
-  background-color: #FAEBD7;
-  padding: 10px;
+  background-color: #FAEBD7; 
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(128, 128, 128, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+  background-image: linear-gradient(to bottom, #f5e6c7 1px, transparent 1px), linear-gradient(to bottom, #f5e6c7 2px, transparent 2px);
+  background-size: 100% 12px; 
+  background-position: 0 0, 0 10px; 
+}
+
+.mydiv:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 30px;
+  height: 5px;
+  background-color: #FFD700; 
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(128, 128, 128, 0.5);
-
 }
 
-
-button {
-  background-color: #FFDAB9;
-  color: black;
-  padding: 20px 30px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom:10px ;
-  transition: background-color 0.3s ease;
+.mydiv:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
-  background-color: #FFCB8E;
-  padding: 20px 40px;
-}
-.note-content {
-  font-size: 16px;
-  color: #555;
-}
-.note-title {
-  font-size: 20px;
+.mydiv h3 {
+  font-size: 1.2rem;
   color: #333;
   margin-bottom: 10px;
 }
-.titre{
+
+.mydiv p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
   text-align: center;
-  font-size: 28px; 
-  font-weight: 600; 
-  color: #333; 
-  letter-spacing: 1px;
-  text-transform: uppercase; 
-  margin-bottom: 20px;
-  position: relative;
+  margin-bottom: 10px;
 }
-.titre:hover {
-  color: #FFDAB9;
-  transition: color 0.3s ease;}
-  .note-user {
-    font-size: 12px; 
-    color: #a9a9a9; 
-    font-style: italic; 
-    margin-top: 5px
-  }
+
+.mydiv button {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.8), rgba(0, 255, 255, 0.5));
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.mydiv button:hover {
+  background-color: #FF6347;
+}
+
+.login-button {
+  background-color: #FFDAB9;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+#titree{
+  text-align: center;
+}
